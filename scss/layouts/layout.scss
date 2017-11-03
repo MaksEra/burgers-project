@@ -1,0 +1,104 @@
+html {
+  font-size: 16px;
+
+  @include  tablets {
+    font-size: 15px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+ font-family: 'ubuntumedium';
+  color: $dark;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 940px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  //min-width: 940px + 20px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+// tag styles reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+
+.section__title {
+  font-family: 'gagalinregular';
+  font-size: 72px;
+  color: $yellow;
+  margin-bottom: 25px;
+
+  &-color-black {
+    color: $dark;
+  }
+
+  &-position-center {
+    text-align: center;
+    }
+}
+

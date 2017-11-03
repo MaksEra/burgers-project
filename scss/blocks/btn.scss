@@ -1,0 +1,11 @@
+.order-btn {
+	padding: 10px 15px;
+	background: $orange;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+
+	&:hover {
+		background: $red;
+	}
+}

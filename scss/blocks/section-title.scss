@@ -1,0 +1,10 @@
+.section__title {
+  font-family: 'gagalinregular';
+  font-size: 4.5rem;
+  color: $yellow;
+  margin-bottom: 1.2rem;
+
+  &-color-black {
+    color: $dark;
+  }
+}
