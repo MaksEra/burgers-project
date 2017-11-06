@@ -1,0 +1,39 @@
+//colors
+$orange: #e25028;
+$red: #cb411b;
+$yellow: #f8b43a;
+$dark: #2f3234;
+
+//resolutions
+$phones: 480px;
+$tablets: 768px;
+
+//normalize
+@import "config/normalize";
+
+//media
+@import "config/media";
+
+//config
+@import "config/variables";
+@import "config/mixins";
+
+//layout
+@import "layouts/fonts";
+@import "layouts/layout";
+
+//blocks
+@import "blocks/btn";
+@import "blocks/section-title";
+@import "blocks/fixed-menu";
+@import "blocks/hamburger-menu";
+//section
+@import "sections/wedo";
+@import "sections/best";
+@import "sections/darkburger";
+@import "sections/team";
+@import "sections/menu";
+@import "sections/reviews";
+@import "sections/order";
+@import "sections/map";
+

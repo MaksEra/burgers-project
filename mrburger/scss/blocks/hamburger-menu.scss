@@ -1,0 +1,36 @@
+.hamburger-menu-link {
+	vertical-align: middle;
+	position: relative;
+	height: 1.375rem;
+	align-items: center;
+	margin-left: 1.875rem;
+	margin-right: 1.25rem;
+	display: none;
+
+	@include tablets() {
+    	display: flex;
+	}
+}
+
+.hamburger-menu-link__nav {
+	&, &:before, &:after {
+		background: #fff;
+		width: 1.5rem;
+		height: 0.3125rem;
+		border-radius: 0.1875rem;
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}

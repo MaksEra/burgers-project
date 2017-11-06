@@ -1,0 +1,100 @@
+.reviews {
+  background: #454545;
+}
+
+.reviews__list {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reviews__item {
+	width: 25%;
+	height: 50%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	filter: grayscale(100%);  
+	position: relative;
+
+	&:hover {
+		.reviews__hover {
+			opacity: 1;
+		}
+	}
+
+	@include tablets {
+		width: 50%;
+		height: 25%;
+	}
+
+	@include phones {
+		width: 50%;
+		height: 25%;
+	}
+}
+
+.reviews__hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#454545, .7);
+	opacity: 0;
+	transition: opacity .4s;
+
+	@include tablets {
+		font-size: 0.875rem;
+		line-height: 3;
+		padding: 0 12%;
+		text-align: center;
+	}
+}
+
+.review__name {
+	color: #fff;
+	font-family: 'gagalinregular';
+	font-size: 0.875rem;
+	margin: 1.5625rem 0;
+
+	@include tablets {
+		margin: 0.875rem;
+	}
+
+	@include phones {
+		margin: 0.875rem;
+	}
+
+}
+
+.review__text {
+	color: #fff;
+	font-family: 'ubuntulight';
+	font-size: 1rem;
+	margin-bottom: 0.8125rem;
+
+	@include phones {
+		display: none;
+	}
+}
+
+.more__link {
+	border-radius: 0.3125rem;
+	background-color: #475052;
+	padding: 0.5rem 0.75rem;
+	display: inline-block;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'ubuntumedium';
+	font-size: 0.75rem;
+	transition: .3s;
+		&:hover {
+			background-color: #313334;
+		}
+	}
+
+.reviews__descr {
+	margin: 0 0.9375rem;
+}
