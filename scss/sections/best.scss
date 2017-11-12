@@ -2,11 +2,9 @@
 	background: url('../img/bg/best.jpg') center center no-repeat;
 	background-size: cover;
 	text-align: center;
+	display: flex;
+	align-items: center;
 
-	.section__title {
-		margin-top: 5rem;
-		margin-bottom: 5rem;
-	}
 }
 
 .best__list {

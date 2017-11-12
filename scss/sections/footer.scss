@@ -1,0 +1,81 @@
+.footer {
+	background: url('../img/bg/footer.jpg') center bottom no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.625rem 0;
+	height: 7%;
+}
+
+.footer__container {
+	width: 95%;
+	display: flex;
+
+	@include phones {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.footer__col {
+  width: 50%;
+  margin-bottom: rem(15px);
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: rem(14px);
+  font-family: 'ubuntulight';
+}
+
+.footer__phone {
+  color: $red;
+  font-family: 'ubuntubold';
+  text-decoration: none;
+  font-size: rem(14px);
+}
+
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.socials {
+  position: relative;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-left: rem(10px);
+}
+
+.socials__link {
+  display: inline-block;
+  max-width: rem(23px);
+  max-height: rem(20px);
+  opacity: .3;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.socials__link-icon {
+  width: rem(20px);
+  height: rem(20px);
+}
+

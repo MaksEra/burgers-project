@@ -33,11 +33,13 @@
 .order__form-row {
   margin-bottom: rem(16px);
   display: flex;
+  font-family: 'ubuntulight';
+
 }
 
 .order__form-label {
   margin-bottom: rem(17px);
-  font-family: 'ubuntumedium';
+  font-family: 'ubuntulight';
   color: #fff;
   font-size: rem(14px);
 }
@@ -68,7 +70,11 @@
   resize: none;
 }
 
-.order__form-buttons {}
+.order__form-buttons {
+  @include phones {
+    width: 80%;
+}
+}
 
 .order__radio {
   position: relative;
