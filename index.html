@@ -27,22 +27,22 @@
 						<nav class="nav">
 							<ul class="nav__list">
 								<li class="nav__item">
-									<a class="nav__link" href="#">о нас</a>
+									<a class="nav__link" href="#" data-goto="1">о нас</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#">бургеры</a>
+									<a class="nav__link" href="#" data-goto="2">бургеры</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#">команда</a>
+									<a class="nav__link" href="#" data-goto="3">команда</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#">меню</a>
+									<a class="nav__link" href="#" data-goto="4">меню</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#">отзывы</a>
+									<a class="nav__link" href="#" data-goto="5">отзывы</a>
 								</li>
 								<li class="nav__item">
-									<a class="nav__link" href="#">контакты</a>
+									<a class="nav__link" href="#" data-goto="7">контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -75,7 +75,9 @@
 					<ul class="best__list">
 						<li class="best__item">
 			            	<div class="best__icon">
-				                <img src="./icons/meat.svg" alt="" class="best__icon-pic">
+								<svg class="best__icon-pic" style="fill: #e25028">
+									<use xlink:href="icons/sprite.svg#meat"></use>
+								</svg>
 			            	</div>
 			            	<div class="best__descr">
 				                <div class="best__title">
@@ -88,7 +90,9 @@
 			            </li>
 			            <li class="best__item">
 			            	<div class="best__icon">
-				                <img src="./icons/hand.svg" alt="" class="best__icon-pic">
+				                <svg class="best__icon-pic" style="fill: #f8b43a">
+									<use xlink:href="icons/sprite.svg#hand"></use>
+								</svg>
 			            	</div>
 			            	<div class="best__descr">
 				                <div class="best__title">
@@ -101,7 +105,9 @@
 			            </li>
 			            <li class="best__item">
 			            	<div class="best__icon">
-				                <img src="./icons/natural.svg" alt="" class="best__icon-pic">
+				                <svg class="best__icon-pic" style="fill: #8ac03e">
+									<use xlink:href="icons/sprite.svg#natural"></use>
+								</svg>
 			            	</div>
 			            	<div class="best__descr">
 				                <div class="best__title">
@@ -117,9 +123,44 @@
 			</section>
 
 
-			<section class="section darkburger">
+			<section class="section burger">
 				<div class="container">
+					<div class="burger-slider">
+            			<div class="burger-slider__beef">
+			              <div class="burger__image">
+			                <img src="img/darkburger.png" alt="dark beef burger" class="burger__image-img">
+			                <div class="burger__small">
+			                  <img src="icons/burger.svg" alt="icon" class="burger__small-icon">
+			                  <div class="burger__small-text">состав</div>
+			                </div>
+			                <div class="burger__kkal">
+			                  <img src="icons/kkal.svg" alt="kkal" class="burger__kkal-icon">
+			                  <div class="burger__kkal-num">1200</div>
+								<div class="burger__kkal-line">ккал</div>
+			                </div>
+			              </div>
+			              <div class="burger__content">
+			                <div class="burger__title">
+			                  <h3 class="section__title section__title-white">dark beef burger</h3>
+			                </div>
+			                <div class="burger__descr">
+			                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+			                </div>
+			                <div class="burger__price">
+			                  <span class="burger__price_sum">550</span>
+			                  <span class="burger__price_rub">рублей</span>
+			                  <a href="#" class="burger__order-btn">Заказать</a>
+			                </div>
+			              </div>
+			            </div>
+			        </div>
 				</div>
+					<a href="#" class="burger__scroll-prev">
+						<img src="icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-p-icon">
+					</a>
+					<a href="#" class="burger__scroll-next">
+						<img src="icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-n-icon">
+					</a>
 			</section>
 
 
@@ -233,8 +274,9 @@
 			</section>
 
 			<section class="section reviews">
+				<div class="section-title visuallyhidden">Отзывы</div>
 				<ul class="reviews__list">
-					<li class="reviews__item" style="background-image: url('./img/rev1.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev1.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -245,7 +287,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev2.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev2.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -256,7 +298,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev3.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev3.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -267,7 +309,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev4.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev4.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -278,7 +320,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev5.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev5.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -289,7 +331,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev6.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev6.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -300,7 +342,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev7.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev7.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -311,7 +353,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item" style="background-image: url('./img/rev8.png')">
+					<li class="reviews__item" style="background-image: url('./img/rev8.jpg')">
 						<div class="reviews__hover">
 							<div class="reviews__descr">
 								<div class="review__name">Константин Спилберг</div>
@@ -328,118 +370,124 @@
 
 			<section class="section order">
 				<div class="container">
-					<div class="section__title">закажите доставку</div>
-						<form class="order__form-tag" id="order-form">
-							<div class="order__form">
-								<div class="order__form-col">
-									<div class="order__form-row">
-										<label class="order__form-block">
-											<div class="order__form-label">Имя</div>
-											<input class="order__form-input" name="name" type="text" placeholder="">
+					<div class="section__title order__title">закажите доставку</div>
+						<div class="form">
+							<form class="form__elem">
+								<div class="form__content">
+									<div class="form__row">
+										<label for="fname" class="form__block">
+											<span class="form__block-title">Имя</span>
+											<input type="text" id="fname" name="fname" class="form__input">
 										</label>
-										<label class="order__form-block">
-											<div class="order__form-label">Телефон</div>
-											<input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
-										</label>
-									</div>
-									<div class="order__form-row">
-										<label class="order__form-block">
-											<div class="order__form-label">Улица</div>
-											<input class="order__form-input" name="street" type="text" placeholder="">
+										<label for="secname" class="form__block">
+											<span class="form__block-title">Телефон</span>
+											<input type="text" id="secname" name="secname" class="form__input">
 										</label>
 									</div>
-									<div class="order__form-row">
-										<label class="order__form-block">
-											<div class="order__form-label">Дом</div>
-											<input class="order__form-input" name="home" type="text" placeholder="">
-										</label>
-										<label class="order__form-block">
-											<div class="order__form-label">Корпус</div>
-											<input class="order__form-input" name="part" type="text" placeholder="">
-										</label>
-										<label class="order__form-block">
-											<div class="order__form-label">Квартира</div>
-											<input class="order__form-input" name="appt" type="text" placeholder="">
-										</label>
-										<label class="order__form-block">
-											<div class="order__form-label">Этаж</div>
-											<input class="order__form-input" name="floor" type="text" placeholder="">
+									<div class="form__row">
+										<label for="street" class="form__block">
+											<span class="form__block-title">Улица</span>
+											<input type="text" id="street" name="street" class="form__input">
 										</label>
 									</div>
-								</div>
-								<div class="order__form-col">
-									<div class="order__form-row">
-										<label class="order__form-block">
-											<div class="order__form-label">Комментарий</div>
-											<textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
- 										</label>
-									</div>
-									<div class="order__form-buttons">
-										<div class="order__form-row">
-											<label class="order__radio">
-												<input class="order__radio-elem" name="payment" type="radio">
-												<div class="order__radio-fake"></div>
-												<div class="order__radio-title">Потребуется сдача</div>
-											</label>
-											<label class="order__radio">
-												<input class="order__radio-elem" name="payment" type="radio">
-												<div class="order__radio-fake"></div>
-												<div class="order__radio-title">Оплата по карте</div>
-											</label>
-										</div>
-										<div class="order__form-row">
-											<label class="order__radio order__radio_checkbox">
-												<input class="order__radio-elem" name="callback" type="checkbox">
-												<div class="order__radio-fake"></div>
-												<div class="order__radio-title">Не перезванивать</div>
-											</label>
-										</div>
-										<div class="order__form-row">
-											<input class="order__form-button" name="" type="submit" value="Заказать">
-											<input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
-										</div>
+									<div class="form__row">
+										<label for="build" class="form__block">
+											<span class="form__block-title">Дом</span>
+											<input type="text" id="build" name="build" class="form__input">
+										</label>
+										<label for="nblock" class="form__block">
+											<span class="form__block-title">Корпус</span>
+											<input type="text" id="nblock" name="block" class="form__input">
+										</label>
+										<label for="flat" class="form__block">
+											<span class="form__block-title">Квартира</span>
+											<input type="text" id="flat" name="flat" class="form__input">
+										</label>
+										<label for="floor" class="form__block">
+											<span class="form__block-title">Этаж</span>
+											<input type="text" id="floor" name="floor" class="form__input">
+										</label>
 									</div>
 								</div>
-							</div>
-						</form>
+								<div class="form__content">
+									<div class="form__row">
+										<label for="comment" class="form__block">
+											<span class="form__block-title">Комментарий</span>
+											<textarea name="comment" id="comment" class="form__teatarea"></textarea>
+										</label>
+									</div>
+									<div class="form__row form__row_center">
+										<label for="change" class="form__block form__block_pointer">
+											<input type="radio" name="payby" id="change" value="change" class="form__input form__input-radio">
+											<span class="form__input-circle">
+											<span class="form__input-inner"></span>
+											</span>
+											<span class="form__block-title">Потребуется сдача</span>
+										</label>
+										<label for="card" class="form__block form__block_pointer">
+											<input type="radio" name="payby" id="card" value="card" class="form__input form__input-radio">
+											<span class="form__input-circle">
+											<span class="form__input-inner"></span>
+											</span>
+											<span class="form__block-title">Оплата по карте</span>
+										</label>
+									</div>
+									<div class="form__row form__row_center">
+										<label for="dontcall" class="form__block form__block_pointer">
+											<input type="checkbox" checked id="dontcall" name="dontcall" class="form__input form__input-checkbox">
+											<span class="form__input-square">
+											<span class="form__input-check"></span>
+											</span>
+											<span class="form__block-title">Не перезванивать</span>
+										</label>
+									</div>
+									<div class="form__row form__row_center">
+										<button class="form__btn form__btn_submit" type="submit">Заказать</button>
+										<button class="form__btn form__btn_reset" type="reset">Очистить</button>
+									</div>
+								</div>
+							</form>
+						</div>
 				</div>
 			</section>
 
 			<section class="section map">
+				<div class="section-title visuallyhidden">Контакты</div>
 				<div class="yandex-map" id="map"></div>
 				<footer class="footer">
 					<div class="container footer__container">
-						<div class="footer__col">
+						<div class="footer__contacts">
 							<div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-							<a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+							<img class="socials__phone-icon" src="icons/phone.svg" alt="phone">
+							<span class="footer__phone"><a href="tel.:+78123771377" class="footer__phone-text">+7 (812) 377-13-77</a></span>
 						</div>
-						<div class="footer__col footer__col_right">
-							<ul class="socials">
+						<div class="footer__socials socials">
+							<ul class="socials__list">
 								<li class="socials__item">
-									<a class="socials__link" href="#">
-										<svg class="socials__link-icon" style="fill: #fff">
-											<use xlink:href="./img/sprite/sprite.svg#vk"></use>
+									<a href="#" class="social__item-link">
+										<svg class="socials__icon">
+											<use xlink:href="icons/sprite.svg#vk"></use>
 										</svg>
 									</a>
 								</li>
 								<li class="socials__item">
-									<a class="socials__link" href="#">
-										<svg class="socials__link-icon" style="fill: #fff">
-											<use xlink:href="./img/sprite/sprite.svg#fb"></use>
+									<a href="#" class="social__item-link">
+										<svg class="socials__icon">
+											<use xlink:href="icons/sprite.svg#fb"></use>
 										</svg>
 									</a>
 								</li>
 								<li class="socials__item">
-									<a class="socials__link" href="#">
-										<svg class="socials__link-icon" style="fill: #fff">
-											<use xlink:href="./img/sprite/sprite.svg#inst"></use>
+									<a href="#" class="social__item-link">
+										<svg class="socials__icon">
+											<use xlink:href="icons/sprite.svg#inst"></use>
 										</svg>
 									</a>
 								</li>
 								<li class="socials__item">
-									<a class="socials__link" href="#">
-										<svg class="socials__link-icon" style="fill: #fff">
-											<use xlink:href="./img/sprite/sprite.svg#twitter"></use>
+									<a href="#" class="social__item-link">
+										<svg class="socials__icon">
+											<use xlink:href="icons/sprite.svg#twitter"></use>
 										</svg>
 									</a>
 								</li>

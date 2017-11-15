@@ -1,4 +1,166 @@
-.darkburger {
-	background: url('../img/bg/darkburger.jpg') center center no-repeat;
-	background-size: cover;
-}
+.burger {
+  background: #f9b43b;
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .burger .section-title {
+    margin-bottom: 0.9375rem;
+    color: #fff; }
+
+.burger-slider {
+  display: flex;
+  width: 100%;
+  align-items: center; }
+
+.burger-slider__beef {
+  display: flex;
+  width: 100%;
+  flex-direction: row; }
+  @include tablets {
+    .burger-slider__beef {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2% 10%; } }
+  @include phones {
+    .burger-slider__beef {
+      padding: 0; } }
+
+.burger__image {
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @include tablets {
+    .burger__image {
+      width: 80%; } }
+
+.burger__image-img {
+  width: 100%;
+  margin-top: 3.125rem; }
+
+.burger__content {
+  width: 60%;
+  color: #fff;
+  font-family: 'ubuntulight';
+  font-size: 0.875rem; }
+  @include tablets {
+    .burger__content {
+      text-align: center;
+      width: 100%; } }
+
+.burger__small {
+  width: 5.625rem;
+  height: 5.625rem;
+  background-color: #f08c33;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.3125rem;
+  left: 0;
+  top: 0; }
+
+.burger__small-text {
+  font-size: 0.875rem;
+  font-family: 'gagalinregular', Arial, sans-serif;
+  color: #fff; }
+
+.burger__kkal {
+  width: 3.75rem;
+  height: 4.8125rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: .5;
+  text-align: center;
+  font-family: 'gagalinregular', Arial, sans-serif;
+  color: #fff; }
+  @include tablets {
+    .burger__kkal {
+      left: initial;
+      bottom: initial;
+      right: 0;
+      top: 0; } }
+
+.burger__kkal-num {
+  margin-top: -2.625rem;
+  font-size: 1.25rem; }
+  @include phones {
+    .burger__kkal-num {
+      margin-left: 0.25rem; } }
+
+.burger__kkal-line {
+  font-size: 0.875rem;
+  margin-top: 0.375rem; }
+  @include phones {
+    .burger__kkal-line {
+      margin-left: 0.25rem; } }
+
+.burger__title {
+  line-height: 1;
+  margin-bottom: 3.125rem; }
+  @include tablets {
+    .burger__title {
+      text-align: center; } }
+
+.burger__price {
+  color: #e25028;
+  font-family: 'gagalinregular', Arial, sans-serif; }
+  .burger__price_sum {
+    font-size: 4.375rem; }
+    @include tablets {
+      .burger__price_sum {
+        margin-left: -6.25rem; } }
+    @include phones {
+      .burger__price_sum {
+        font-size: 3.125rem; } }
+  .burger__price_rub {
+    font-size: 1.875rem; }
+    @include phones {
+      .burger__price_rub {
+        font-size: 1.5rem; } }
+
+.burger__order-btn {
+  display: inline-block;
+  background-color: #e45028;
+  text-transform: uppercase;
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-family: 'ubuntumedium';
+  font-size: 0.8125rem;
+  line-height: 2.1875rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.9375rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 1.5625rem; }
+  .burger__order-btn:hover {
+    background-color: #c1401e; }
+  @include tablets {
+    .burger__order-btn {
+      position: absolute;
+      margin-top: 3.125rem; } }
+  @include phones {
+    .burger__order-btn {
+      margin-top: 1.75rem;
+      padding: 0 1.25rem; } }
+
+.burger__scroll-prev {
+  position: absolute;
+  transform: rotate(90deg);
+  left: 0.625rem;
+  vertical-align: middle; }
+  .burger__scroll-prev:hover .burger__scroll-p-icon use {
+    fill: #fff; }
+
+.burger__scroll-next {
+  position: absolute;
+  transform: rotate(-90deg);
+  right: 0.625rem; }
+  .burger__scroll-next:hover .burger__scroll-n-icon use {
+    fill: #fff; }

@@ -31,9 +31,29 @@
 }
 
 .best__icon {
-	display: flex;
-	justify-content: center;
-	margin: 0 0.625rem;
+	display: block;
+	height: 6.25rem;
+	text-align: center;
+	margin-bottom: 1.5625rem;
+
+	@include phones {
+    	width: 20%;
+    	margin-right: 3.125rem;
+    	margin-bottom: 0;
+    }
+}
+
+.best__icon-pic {
+	width: 90%;
+	height: 5.5rem;
+
+  	@include phones {
+    	margin-left: 1.25rem;
+	} 
+}
+
+.best__icon-pic svg {
+    max-width: 95%;
 }
 
 .best__title {
