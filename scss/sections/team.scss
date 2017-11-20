@@ -1,135 +1,147 @@
 .team {
-	background: url('../img/bg/team.jpg') center center no-repeat;
+  background: url('../img/bg/team.jpg') center center no-repeat;
 	background-size: cover;
 	position: relative;
-
-	.section__title {
-		margin-bottom: 12%;
-	}
 }
 
 .team__content {
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  background-color: $dark;
+  color: #fff;
+  opacity: 0.9;
+  padding: 5% 1% 0 6%;
+
+  @include tablets {
+    left: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.team__section {
-	position: absolute;
-	right: 0;
-	top: 0;
-  bottom: 0;
-  width: 50%;
-	background: rgba(#2f3234, .93);
-  padding: 5% 2% 0 7%;
+.team-acco {
+  margin-top: 14%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 
   @include tablets {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-
-.team-acco {
-}
-
-.team-acco__item {
-  margin-bottom: rem(40px);
-  
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	&.active {
-		.team-acco__trigger {
-			color: $yellow;
-
-			&:before {
-				transform: rotate(-180deg);
-			}
-		}
-	}
+      justify-content: center;
+      align-items: center;
+    }
 }
 
 .team-acco__trigger {
-	color: #fff;
-	font-size: rem(14px);
-	font-family: 'gagalinregular';
-	text-decoration: none;
-	position: relative;
-  display: inline-flex;
-  margin-bottom: rem(20px);
-  align-items: center;  
-  
-  @include tablets() {
-    font-size: rem(25px);
+  display: flex;
+  text-transform: uppercase;
+  font-family: 'gagalinregular';
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  margin-bottom: 0.625rem;
+
+  &:hover {
+    color: $yellow;
   }
 
-	&:before, &:after {
-		content: "";
-		display: block;
-		position: absolute;
-		left: rem(-18px);
-		top: rem(8px);
-		width: 0;
-    height: 0;
-	}
+  &:before {
+    content: "";
+    height: 0.3125rem;
+    border: 0.3125rem solid transparent;
+    border-top-color: $yellow;
+    border-bottom-width: 0;
+    margin-right: 0.4rem;
+  }
 
-	&:before {
-		border-top: rem(7px) solid $yellow;
-		border-left: rem(5px) solid transparent;
-		border-right: rem(5px) solid transparent;
-		border-bottom: rem(0px) solid transparent;
-		transform: rotate(0deg);
-		transition: .3s;
-	}
+  @include tablets {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
 
-	&:after {
-		display: none;
-		border-bottom: rem(7px) solid $yellow;
-		border-left: rem(5px) solid transparent;
-		border-right: rem(5px) solid transparent;
-		border-top: rem(0px) solid transparent;
-	}
+  @include phones {
+    font-size: 1.5rem;
+  }
 }
 
 .team-acco__content {
-	padding-top: rem(14px);
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.team-acco__content-block {
+  display: flex;
+  padding: 0.625rem;
+}
+
+.acco__content-title {
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.acco__content-descr {
+  font-size: 1rem;
+  font-family: 'ubuntulight';
+}
+
+.team-acco__item {
+  margin-bottom: 0.625rem;
 }
 
 .team-acco__pic {
-	text-align: center;
-	width: 30%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 8.75rem;
+  margin-bottom: 1.5625rem;
 }
 
 .team-acco__img {
-	width: rem(100px);
-	height: rem(100px);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	border-radius: 50%;
+  margin: 0 1.5rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include phones {
+    width: 6.875rem;
+    height: 6.875rem;
+  }
 }
 
 .team-acco__text {
-	width: 70%;
+  width: 12.5rem;
+
+  @include tablets {
+    width: 22.5rem;
+  }
+
+  @include phones {
+    width: 18.75rem;
+  }
 }
 
-.team-acco__pic, .team-acco__text {
+//Доделать разворот!!!!
+.team-acco__item.active .team-acco__trigger{
+  color: $yellow;
 }
 
-.team-acco__title {
-	font-family: 'ubuntubold';
-	font-size: rem(14px);
-	color: #fff;
-	margin-bottom: rem(14px);
-}
-
-.team-acco__text-content {
-	font-family: 'ubuntulight';
-	color: #fff;
-	font-size: rem(14px);
+.team-acco__item.active .team-acco__trigger:before {
+  transform: rotate(180deg);
+  transition: .5s;
 }
