@@ -1,4 +1,4 @@
-.menu {
+.section-menu {
 	background: url('../img/bg/menu.jpg') center center no-repeat;
 	background-size: cover;
 	position: relative;
@@ -10,75 +10,138 @@
 	left: 10%;
 }
 
-.menu-acco {
+.menu {
 	position: absolute;
 	right: 0;
 	top: 0;
-	bottom: 0;
-  display: flex;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
-.menu-acco__item {
-	height: 100%;
-
-	&.active {
-		.menu-acco__trigger-text {
-			color: $yellow;
-		}
-	}
+.menu__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	min-height: 650px;
 }
 
-.menu-acco__trigger {
-	width: rem(80px);
-	display: block;
-	height: 100%;
-	float: left;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+.menu__link {
 	text-decoration: none;
-  position: relative;
-}
+	transition: all .2s;
 
-.menu-acco__trigger-text {
-	font-size: rem(40px);
-	color: #fff;
-	font-family: 'gagalinregular';
-	text-align: center;
-	white-space: nowrap;
-  position: absolute;
-  transform: rotate(-90deg) translateY(-50%);
-  transform-origin: 0 0;
-  left: 50%;
-  top: 100%;
-  margin-top: rem(-20px);
-}
+	&:hover .menu__item-title {
+		color: $yellow;
+	}
 
-.menu-acco__content {
-	height: 100%;
-	float: left;
-	background: rgba(#2f3234, .93);
-	width: 0;
-	overflow: hidden;
+	@include phones {
+		width: 40px;
+	}
 
 	&:hover {
-		overflow: visible;
+		transform: none;
 	}
 }
 
-.menu-acco__text {
-	font-family: 'ubuntulight';
-	font-size: rem(14px);
+.menu__item {
+	display: flex;
+	height: 100vh;
+	min-height: 650px;
+}
+
+.menu__item-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	min-height: 650px;
+	width: 5rem;
+	padding-left: 0.5625rem;
+	box-shadow: inset 0 0 0 125rem rgba(0, 0, 0, 0.7);
+	font-size: 2.5rem;
+	font-family: 'gagalinregular';
+	line-height: 4rem;
 	color: #fff;
-	padding: rem(60px) rem(30px);
-	width: 100%;
-  line-height: 1.8;
-  display: none;
-}
+	overflow: hidden;
 
-.menu-acco__item:hover {
-	.menu-acco__text {
-		display: inline;
+	@include phones {
+	    padding: 0;
+	    width: 40px;
+	    line-height: initial;
 	}
 }
 
+.menu__item-title-meat {
+	background-image: url(../img/formeat.jpg);
+}
+
+.menu__item-title-vegeterians {
+	background-image: url(../img/forvegan.jpg);
+}
+
+.menu__item-title-diet {
+ 	background-image: url(../img/fordiet.jpg);
+}
+
+.menu__item--active .menu__item-text {
+	opacity: 1;
+	transition-delay: .6s;
+}
+
+.menu__item--active .menu__item-content {
+	width: 33.75rem;
+	display: block;
+
+	@include tablets {
+		width: 15.5rem;
+	}
+
+	@include phones {
+		width: 12.5rem;
+	}
+}
+
+.menu__item--active .menu__item-title {
+	color: $yellow;
+}
+
+.menu__item-title h3 {
+	transform: rotate(-90deg);
+	transform-origin: 50% 50% 0;
+	margin-left: -10.3125rem;
+	display: block;
+	width: 25rem;
+
+	@include phones {
+		font-size: 1.625rem;
+		margin-left: -11.3125rem;
+	}
+}
+
+.menu__item-content {
+	background-color: $dark;
+	opacity: 0.9;
+	width: 0;
+	height: 100vh;
+	min-height: 650px;
+	overflow: hidden;
+	transition: .6s;
+}
+
+.menu__item-text {
+	padding: 3.75rem 1.875rem 0;
+	font-size: 0.875rem;
+	font-family: 'ubuntulight';
+	line-height: 1.5rem;
+	color: #fff;
+	opacity: 0;
+
+	@include phones {
+		padding: 1.25rem 0.625rem 0;
+		line-height: 1.4;
+	}
+}
