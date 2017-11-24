@@ -36,7 +36,7 @@ $(function () {
     }
 })
 
-(function() {
+/*(function() {
   "use strict";
   var hamMenu = document.querySelector(".hamburger");
   if (hamMenu) {
@@ -52,6 +52,7 @@ $(function () {
       document.querySelector("body").classList.toggle("body--active");
     });
   }
+*/
 
 //Slider
 
