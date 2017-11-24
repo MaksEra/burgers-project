@@ -1,4 +1,4 @@
-.hamburger-menu-link {
+/*.hamburger-menu-link {
 	vertical-align: middle;
 	position: relative;
 	height: 1.375rem;
@@ -32,5 +32,112 @@
 
 	&:after {
 		bottom: 0;
+	}
+}
+*/
+
+.hamburger {
+	display:none;
+	position:relative;
+	width:1.5rem;
+	padding:0 0;
+	-webkit-transition:all .4s;
+	transition:all .4s;
+	height:1.4375rem
+}
+
+.hamburger span,
+.hamburger:after,
+.hamburger:before {
+	content:'';
+	width:1.5rem;
+	height:.25rem;
+	background-color:#fff;
+	transition:all .4s;
+	display:block;
+	margin-top:.3125rem;
+	border-radius:.125rem
+}
+
+.hamburger:before {
+	margin-top:0
+}
+@media (max-width:768px) {
+	.hamburger {
+		display:block;
+		margin-left:1.8125rem
+	}
+}
+
+.hamburger--active {
+	position:relative;
+	z-index:1;
+}
+
+.hamburger--active span {
+	display:none
+}
+
+.hamburger--active:after {
+	transform:rotate(-45deg);
+	top:.3125rem;
+	position:absolute 
+}
+
+.hamburger--active:before {
+	transform:rotate(45deg);
+	top:.625rem;
+	position:absolute
+}
+
+.hamburger-menu {
+	height:0;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:initial;
+	transition:all .5s;
+	background-color:rgba(47,50,51,.99)
+}
+
+.hamburger-menu__list {
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	margin-top:26%
+}
+
+.hamburger-menu__item {
+	position:relative;
+	margin-bottom:8%
+}
+
+.hamburger-menu__item:after {
+	content:"";
+	position:absolute;
+	left:48%;
+	top:200%;
+	width:.3125rem;
+	height:.3125rem;
+	background-color:#fff;
+	border-radius:50%
+}
+
+.hamburger-menu__link {
+	font-family:ubunturegular;
+	text-decoration:none;
+	font-size:1.5rem;
+	color:#fff
+}
+
+.hamburger-menu--active {
+	display:none;
+	height:100%
+}
+@media (max-width:768px) {
+	.hamburger-menu--active {
+		display:initial
 	}
 }

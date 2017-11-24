@@ -1,12 +1,12 @@
 .burger {
-  background: #f9b43b;
-  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  background: $yellow;
+  background: linear-gradient(to bottom, $yellow 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, $yellow 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.burger .section-title {
+/*.burger .section-title {
   margin-bottom: 0.9375rem;
 }
 
@@ -80,6 +80,7 @@
     background-color: $orange;
   }
 }
+*/
 
 .burger__small-text {
   font-size: 0.875rem;
@@ -87,12 +88,13 @@
   color: #fff;
 }
 
+
 .burger__kkal {
-  width: 3.75rem;
-  height: 4.8125rem;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  //width: 3.75rem;
+  //height: 4.8125rem;
+  //left: 0;
+  //bottom: 0;
   opacity: .5;
   text-align: center;
   font-family: 'gagalinregular', Arial, sans-serif;
@@ -105,6 +107,7 @@
     top: 0;
   }
 }
+
 
 .burger__kkal-num {
   margin-top: -2.625rem;
@@ -124,82 +127,255 @@
   }
 }
 
-.burger__title {
-  line-height: 1;
-  margin-bottom: 3.125rem;
+.burgers-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  min-height: 650px;
+}
+
+.burgers-section-content {
+  display: flex;
+  width: 93%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.slider__list {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider__item {
+  display: block;
+  max-width: 940px;
+  margin: 0 25px;
+
+  @include tablets {
+    margin: 0 90px;
+  }
+
+  @include tablets {
+    margin: 0 40px;
+  }
+}
+
+.slider__item-container {
+  display: flex;
+  max-width: 940px;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.burgers-section__slider {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+  //min-height: 31.625rem;5
+  min-height: 35rem;
+}
+
+.slider__content {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 65vh;
+
+  @include tablets {
+    overflow: initial;
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.composition {
+  position: absolute;
+  width: 5.625rem;
+  height: 5.625rem;
+  border-radius: 0.25rem;
+  background-color: #f08c33;
+  text-align: center;
+  transition: .5s;
+  
+  &:hover {
+    background-color: #e35028; }
+
+  @include tablets {
+    left: 5%;
+  }
+
+  @include phones {
+    left: -1.4375rem;
+    top: 0;
+  }
+}
+
+.composition:hover .composition-detail {
+  display: block;
+  left: 5.625rem; }
+  @include phones {
+    .composition:hover .composition-detail {
+      transform: scale(0.7);
+      top: 2.5rem;
+      left: -2.5rem;
+      z-index: 2; } }
+
+.composition-detail {
+  position: absolute;
+  background-color: rgba(254, 248, 236, 0.9);
+  display: none;
+  width: 16.875rem;
+  height: 20.75rem;
+  border-radius: 0.25rem;
+  left: 62499.9rem;
+  top: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.composition-detail__item {
+  display: flex;
+  line-height: 2.375rem;
+  margin: 0rem 1.25rem 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem; }
+  .composition-detail__item:first-child {
+    margin-top: 1.125rem; }
+  .composition-detail__item span {
+    margin-top: 0.5rem; }
+
+.composition-detail__visual {
+  width: 3.125rem;
+  height: 2.375rem; }
+  .composition-detail__visual img {
+    width: 100%;
+    height: 100%; }
+
+.composition-detail__name {
+  font-family: 'ubuntumedium';
+  width: 6.25rem;
+  margin-left: 1.25rem;
+  text-align: left;
+  line-height: 2.375rem;
+}
+
+.composition-detail__weight {
+  font-family: 'ubuntulight';
+  text-align: left;
+  margin-left: 1.5625rem;
+  line-height: 2.375rem;
+}
+
+.composition__title {
+  margin-top: 0.9375rem;
+  cursor: pointer;
+}
+
+.burgers-section--title {
+  color: #fff;
+  margin: 0 0 2.25rem;
+  line-height: 4rem;
+  overflow: hidden;
+
+  @include phones {
+    font-size: 2.125rem;
+    line-height: 3rem;
+    margin: 0 0 .25rem;
+  }
+}
+
+.burgers-section__descr {
+  font-family: 'ubuntulight';
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @include phones {
+    margin-bottom: 0rem;
+  }
+}
+
+.burgers-section__price {
+  font-family: 'gagalinregular';
+  color: $orange;
+}
+
+.burgers-section__ammount {
+  font-size: 4.5rem;
+  letter-spacing: -0.2 0.1875rem;
+  display: inline;
+
+  @include phones {
+    font-size: 3.5rem;
+  }
+}
+
+.burgers-section__currency {
+  display: inline;
+  font-size: 1.875rem;
+}
+
+.burgers-section__order {
+  margin-left: 1.875rem;
+  display: inline;
+  vertical-align: super;
+
+  @include phones {
+    margin: 0;
+  }
+}
+
+.burgers-section-side {
+  width: 50%;
+  position: relative;
+  margin-right: 10px;
 
   @include tablets {
     text-align: center;
+    width: initial;
+    margin-bottom: 20px;
   }
 }
 
-.burger__price {
-  color: $orange;
-  font-family: 'gagalinregular', Arial, sans-serif;
+.burgers-section-side__image {
+  margin-top: 5.9375rem;
+
+  @include phones {
+    margin-top: 1.9375rem;
+  }
 }
 
-.burger__price_sum {
-  font-size: 4.375rem;
+.burgers-section-side__img {
+  width: 100%;
 
   @include tablets {
-    margin-left: -6.25rem;
-  }
-
-  @include phones {
-    font-size: 3.125rem;
+    width: 70%;
   }
 }
 
-.burger__price_rub {
-  font-size: 1.875rem;
-
-  @include phones {
-    font-size: 1.5rem;
-  }
-}
-
-.burger__order-btn {
-  display: inline-block;
-  background-color: $orange;
-  text-transform: uppercase;
-  border-radius: 0.3125rem;
-  text-align: center;
-  font-family: 'ubuntumedium';
-  font-size: 0.8125rem;
-  line-height: 2.1875rem;
-  color: #fff;
-  text-decoration: none;
-  padding: 0 0.9375rem;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-left: 1.5625rem;
-
-  &:hover {
-    background-color: $red;
-  }
-
-  @include tablets {
-    position: absolute;
-    margin-top: 3.125rem;
-  }
-
-  @include phones {
-    margin-top: 1.75rem;
-    padding: 0 1.25rem;
-  }
-}
-
-.burger__scroll-prev {
+.arrow-prev {
   position: absolute;
   transform: rotate(90deg);
   left: 0.625rem;
   vertical-align: middle; }
-  .burger__scroll-prev:hover .burger__scroll-p-icon use {
+  .arrow-prev:hover .arrow-prev__icon use {
     fill: #fff; }
 
-.burger__scroll-next {
+.arrow-next {
   position: absolute;
   transform: rotate(-90deg);
   right: 0.625rem; }
-  .burger__scroll-next:hover .burger__scroll-n-icon use {
+  .arrow-next:hover .arrow-next__icon use {
     fill: #fff; }
+    

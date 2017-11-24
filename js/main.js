@@ -36,6 +36,23 @@ $(function () {
     }
 })
 
+(function() {
+  "use strict";
+  var hamMenu = document.querySelector(".hamburger");
+  if (hamMenu) {
+    hamMenu.addEventListener("click", function(e) {
+      e.preventDefault();
+      document
+        .querySelector(".hamburger-menu")
+        .classList.toggle("hamburger-menu--active");
+      document.querySelector(".logo").classList.toggle("logo--active");
+      document
+        .querySelector(".hamburger")
+        .classList.toggle("hamburger--active");
+      document.querySelector("body").classList.toggle("body--active");
+    });
+  }
+
 //Slider
 
 /*$(function () {
@@ -81,6 +98,62 @@ $(function () {
 });    
 
 })*/
+
+// Слайдер //
+
+    $( () => {
+      let list = $('.slider__list'),
+          sliderItemsCount = $('.slider__item').length;
+          sliderWidth = sliderItemsCount * 100 + "%";
+          // Определение ширины слайдера в % в зависимости от количества слайдов
+          setSliderWidth = function(element, width) {
+            $(element).css(width, sliderWidth);
+          }
+          // анимация движения
+          moveSlide = function(container, slideNum) {
+            let items = $('.slider__item'),
+                activeSlide = items.filter('.active'),
+                reqItem = items.eq(slideNum),
+                reqIndex = reqItem.index(),
+                duration = 500;
+
+            if (reqItem.length) {
+              list.animate({
+                'left': -reqIndex * 100 + '%'}, duration, () => {
+                  activeSlide.removeClass('active');
+                  reqItem.addClass('active');
+              });
+            }
+          }
+      setSliderWidth(list, 'width');
+
+
+      // прокрутка при нажатии на кнопки вправо или влево
+      $('.arrow').click(function(e){
+        e.preventDefault();
+
+        var $this = $(this),
+            container = $('.burgers-section__slider'),
+            items = $('.slider__item', container),
+            activeItem = items.filter('.active'),
+            existedItem, edgeItem, reqItem;
+
+        if ($this.hasClass('arrow-next')) { //вперед
+          existedItem = activeItem.next();
+          edgeItem = items.first();
+        }
+        if ($this.hasClass('arrow-prev')) { //назад
+          existedItem = activeItem.prev();
+          edgeItem = items.last();
+        }
+
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+        moveSlide(container, reqItem);
+
+      });
+
+    });
 
 
 //acco-team
