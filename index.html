@@ -85,9 +85,11 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="down-arrow">
-						<img class="down-arrow__pic" src="./icons/arrow-scroll.svg" alt="arrow-down" />
-					</a>
+					<div class="arrow-down">
+						<a href="#" data-scroll-to="1" class="arrow-down__link">
+							<img class="arrow-down__pic" src="./icons/arrow-scroll.svg" alt="arrow-down" />
+						</a>
+					</div>
 				</div>
 			</section>
 
@@ -830,6 +832,36 @@
 			</section>
 		</div>
 	</div>
+
+	<div class="hamburger-menu" id="hamburger-menu">
+		<div class="hamburger-menu__logo">
+			<a class="logo" href="#"><img src="./img/icons/logo.svg"></a>
+		</div>
+		<div class="hamburger-menu__items">
+		<nav class="nav nav_hamburger">
+			<ul class="nav__list">
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="1">о нас</a>
+				</li>
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="2">бургеры</a>
+				</li>
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="3">команда</a>
+				</li>
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="4">меню</a>
+				</li>
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="5">отзывы</a>
+				</li>
+				<li class="nav__item"><a class="nav__link" href="" data-scroll-to="7">контакты</a>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		<a class="hamburger-menu__close" href="#">
+			<svg class="hamburger-menu__close-icon">
+				<use xlink:href="./img/sprite/sprite.svg#close"></use>
+			</svg>
+		</a>
+	</div>
+	
 	<ul class="fixed-menu">
 		    <li class="fixed-menu__item active">
 		      <a href="" class="fixed-menu__link" data-scroll-to="0"></a>

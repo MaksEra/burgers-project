@@ -115,26 +115,3 @@
 	font-size: 4rem;
 	line-height: 1;
 }
-
-.down-arrow {
-	position: absolute;
-	left: 50%;
-	bottom: 1.25rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: .3s;
-
-	//&:hover {
-	//	.down-arrow-pic {
-	//		width: 2.8rem;
-	//		height: 2.8rem;
-	//	}
-	//}
-}
-
-//.down-arrow-pic {
-//	width: 2.5rem;
-//	height: 2.5rem;
-//	transition: .3s;
-//}

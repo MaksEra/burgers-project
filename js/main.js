@@ -36,125 +36,76 @@ $(function () {
     }
 })
 
-/*(function() {
-  "use strict";
-  var hamMenu = document.querySelector(".hamburger");
-  if (hamMenu) {
-    hamMenu.addEventListener("click", function(e) {
-      e.preventDefault();
-      document
-        .querySelector(".hamburger-menu")
-        .classList.toggle("hamburger-menu--active");
-      document.querySelector(".logo").classList.toggle("logo--active");
-      document
-        .querySelector(".hamburger")
-        .classList.toggle("hamburger--active");
-      document.querySelector("body").classList.toggle("body--active");
-    });
-  }
-*/
+$(function() {
+  $('.hamburger-menu').click(function() {
+    $(this).toggleClass('hamburger-menu_active');
+    $('.overlay').toggleClass('overlay_open');
+    $('body').toggleClass('disabled-onepage-scroll');    
+  });
+  $('.overlay-menu__link').click(function(e){  
+    e.preventDefault();
+    $('.hamburger-menu').removeClass('hamburger-menu_active');
+    $('body').removeClass('disabled-onepage-scroll'); 
+    $('.overlay').removeClass('overlay_open');    
+  });
+})
 
-//Slider
 
-/*$(function () {
-  $(document).ready(function ($) {
-  
-  var slideCount = $('#slider ul li').length;
-  var slideWidth = $('#slider ul li').width();
-  var slideHeight = $('#slider ul li').height();
-  var sliderUlWidth = slideCount * slideWidth;
-  
-  $('#slider').css({ width: slideWidth, height: slideHeight });
-  
-  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-  
-    $('#slider ul li:last-child').prependTo('#slider ul');
+//slider
 
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
-});    
-
-})*/
-
-// Слайдер //
-
-    $( () => {
-      let list = $('.slider__list'),
-          sliderItemsCount = $('.slider__item').length;
-          sliderWidth = sliderItemsCount * 100 + "%";
+$(function() {
+  let list = $('.slider__list'),
+      sliderItemsCount = $('.slider__item').length;
+      sliderWidth = sliderItemsCount * 100 + "%";
           // Определение ширины слайдера в % в зависимости от количества слайдов
-          setSliderWidth = function(element, width) {
-            $(element).css(width, sliderWidth);
-          }
+      setSliderWidth = function(element, width) {
+        $(element).css(width, sliderWidth);
+      }
           // анимация движения
-          moveSlide = function(container, slideNum) {
-            let items = $('.slider__item'),
-                activeSlide = items.filter('.active'),
-                reqItem = items.eq(slideNum),
-                reqIndex = reqItem.index(),
-                duration = 500;
+      moveSlide = function(container, slideNum) {
+        let items = $('.slider__item'),
+            activeSlide = items.filter('.active'),
+            reqItem = items.eq(slideNum),
+            reqIndex = reqItem.index(),
+            duration = 500;
 
-            if (reqItem.length) {
-              list.animate({
-                'left': -reqIndex * 100 + '%'}, duration, () => {
-                  activeSlide.removeClass('active');
-                  reqItem.addClass('active');
-              });
-            }
-          }
-      setSliderWidth(list, 'width');
+        if (reqItem.length) {
+          list.animate({
+            'left': -reqIndex * 100 + '%'}, duration, () => {
+              activeSlide.removeClass('active');
+              reqItem.addClass('active');
+          });
+        }
+      }
+  setSliderWidth(list, 'width');
 
 
       // прокрутка при нажатии на кнопки вправо или влево
-      $('.arrow').click(function(e){
-        e.preventDefault();
+  $('.arrow').click(function(e){
+    e.preventDefault();
 
-        var $this = $(this),
-            container = $('.burgers-section__slider'),
-            items = $('.slider__item', container),
-            activeItem = items.filter('.active'),
-            existedItem, edgeItem, reqItem;
+    var $this = $(this),
+        container = $('.burgers-section__slider'),
+        items = $('.slider__item', container),
+        activeItem = items.filter('.active'),
+        existedItem, edgeItem, reqItem;
 
-        if ($this.hasClass('arrow-next')) { //вперед
-          existedItem = activeItem.next();
-          edgeItem = items.first();
-        }
-        if ($this.hasClass('arrow-prev')) { //назад
-          existedItem = activeItem.prev();
-          edgeItem = items.last();
-        }
+    if ($this.hasClass('arrow-next')) { //вперед
+      existedItem = activeItem.next();
+      edgeItem = items.first();
+    }
+    if ($this.hasClass('arrow-prev')) { //назад
+      existedItem = activeItem.prev();
+      edgeItem = items.last();
+    }
 
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+    reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-        moveSlide(container, reqItem);
+    moveSlide(container, reqItem);
 
-      });
+  });
 
-    });
+});
 
 
 //acco-team
@@ -198,9 +149,6 @@ $('.team-acco__trigger').on('click', e => {
 })
 
 
-
-
-
 //acco-menu
 
 $(function () {
@@ -225,8 +173,8 @@ $('.menu__link').click (
 })
 
 
-
 //OnePageScroll
+
 $(function () {
 
 
