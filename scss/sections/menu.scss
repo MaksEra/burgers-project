@@ -101,7 +101,7 @@
 	}
 
 	@include phones {
-		width: 12.5rem;
+		width: 250px;
 	}
 }
 
@@ -141,7 +141,8 @@
 	opacity: 0;
 
 	@include phones {
-		padding: 1.25rem 0.625rem 0;
+		padding: 30px 15px 0;
 		line-height: 1.4;
+		font-size: 1rem;
 	}
 }

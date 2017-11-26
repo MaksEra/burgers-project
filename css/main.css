@@ -615,6 +615,8 @@ footer {
   z-index: 1;
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   background: rgba(47, 50, 52, 0.99);
   height: 100%; }
 
@@ -662,7 +664,7 @@ footer {
   font-size: 1.5rem;
   position: relative; }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .hamb-menu__link {
     margin: 20px; } }
 
@@ -677,7 +679,7 @@ footer {
   left: 50%;
   top: 200%; }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .hamb-menu__link:after {
     top: 150%; } }
 
@@ -1420,6 +1422,8 @@ footer {
 
 .team-acco__item {
   margin-bottom: 0.625rem; }
+  .team-acco__item:last-child {
+    margin-bottom: 0; }
 
 .team-acco__pic {
   border-radius: 50%;
@@ -1462,6 +1466,47 @@ footer {
   -o-transition: .5s;
   transition: .5s; }
 
+/*
+
+.team-acco__trigger{
+  color:#fff;
+  font-size:.875rem;
+  font-family:Gagalin-Regular,Helvetica,sans-serif;
+  text-decoration:none;
+  position:relative;
+  display:block;
+  margin-bottom:1.25rem
+}
+
+.team-acco__trigger:after,.team-acco__trigger:before{
+  content:"";
+  display:block;
+  position:absolute;
+  left:-1.125rem;
+  top:.5rem;
+  width:0;
+  height:0
+}
+
+.team-acco__trigger:before{
+  border-top:.4375rem solid #f9b43b;
+  border-bottom:0 solid transparent;
+  -webkit-transform:rotate(0deg);
+  transform:rotate(0deg);
+  -webkit-transition:.3s;
+  transition:.3s
+}
+
+.team-acco__trigger:after,.team-acco__trigger:before{
+  border-left:.3125rem solid transparent;
+  border-right:.3125rem solid transparent
+}
+
+.team-acco__trigger:after{
+  display:none;
+  border-bottom:.4375rem solid #f9b43b;
+  border-top:0 solid transparent
+}*/
 .section-menu {
   background: url("../img/bg/menu.jpg") center center no-repeat;
   background-size: cover;
@@ -1569,7 +1614,7 @@ footer {
       width: 15.5rem; } }
   @media screen and (max-width: 480px) {
     .menu__item--active .menu__item-content {
-      width: 12.5rem; } }
+      width: 250px; } }
 
 .menu__item--active .menu__item-title {
   color: #f8b43a; }
@@ -1609,8 +1654,9 @@ footer {
   opacity: 0; }
   @media screen and (max-width: 480px) {
     .menu__item-text {
-      padding: 1.25rem 0.625rem 0;
-      line-height: 1.4; } }
+      padding: 30px 15px 0;
+      line-height: 1.4;
+      font-size: 1rem; } }
 
 .reviews {
   background: #454545; }
