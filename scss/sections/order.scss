@@ -97,7 +97,7 @@
   }
 }
 
-.form__input, .form__teatarea {
+.form__input, .form__textarea {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   border: 0.0625rem solid transparent;
@@ -112,16 +112,16 @@
   }
 
   @include phones {
-    margin-top: 0.3125rem;
+    margin-top: 0;
   }
 }
 
-.form__input:focus, .form__teatarea:focus {
+.form__input:focus, .form__textarea:focus {
   outline: none;
   border-color: $yellow;
 }
 
-.form__teatarea {
+.form__textarea {
   resize: none;
   height: 7rem;
 }

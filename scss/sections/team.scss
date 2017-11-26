@@ -57,6 +57,7 @@
     border-top-color: $yellow;
     border-bottom-width: 0;
     margin-right: 0.4rem;
+    margin-top: 0.3125rem;
   }
 
   @include tablets {
@@ -136,12 +137,11 @@
   }
 }
 
-//Доделать разворот!!!!
-.team-acco__item.active .team-acco__trigger{
+.team-acco__item.team-active .team-acco__trigger{
   color: $yellow;
 }
 
-.team-acco__item.active .team-acco__trigger:before {
+.team-acco__item.team-active .team-acco__trigger:before {
   transform: rotate(180deg);
   transition: .5s;
 }

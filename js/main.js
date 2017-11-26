@@ -36,19 +36,27 @@ $(function () {
     }
 })
 
-$(function() {
-  $('.hamburger-menu').click(function() {
-    $(this).toggleClass('hamburger-menu_active');
-    $('.overlay').toggleClass('overlay_open');
-    $('body').toggleClass('disabled-onepage-scroll');    
-  });
-  $('.overlay-menu__link').click(function(e){  
-    e.preventDefault();
-    $('.hamburger-menu').removeClass('hamburger-menu_active');
-    $('body').removeClass('disabled-onepage-scroll'); 
-    $('.overlay').removeClass('overlay_open');    
-  });
-})
+
+//запрет или разрешение скороллинга
+  var scrollControl = function(param) {
+    $.fn.fullpage.setAllowScrolling(param);
+    $.fn.fullpage.setKeyboardScrolling(param, 'down');
+  }
+//меню в моб версии
+        $('.menu-hamburger-link').on('click', function(){
+            $('.hamb-menu').css('display','block');
+            $('.hamb-menu').addClass('hamb-menu-active');            
+            // $("section:not(.first_screen)").css('display','none');
+            // $("body").css('overflow','hidden');
+            $('body').addClass('disabled-onepage-scroll');
+                
+            $('.onepage-pagination').css('right','-99999px');
+        });
+        $('#closeIcon').on('click', function(){
+            $('.hamb-menu').css('display','none');
+            $('.hamb-menu').removeClass('hamb-menu-active');
+            $('.onepage-pagination').css('right','25px');
+        });
 
 
 //slider
@@ -80,7 +88,6 @@ $(function() {
   setSliderWidth(list, 'width');
 
 
-      // прокрутка при нажатии на кнопки вправо или влево
   $('.arrow').click(function(e){
     e.preventDefault();
 
@@ -90,11 +97,11 @@ $(function() {
         activeItem = items.filter('.active'),
         existedItem, edgeItem, reqItem;
 
-    if ($this.hasClass('arrow-next')) { //вперед
+    if ($this.hasClass('arrow-next')) {
       existedItem = activeItem.next();
       edgeItem = items.first();
     }
-    if ($this.hasClass('arrow-prev')) { //назад
+    if ($this.hasClass('arrow-prev')) {
       existedItem = activeItem.prev();
       edgeItem = items.last();
     }
