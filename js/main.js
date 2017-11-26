@@ -283,3 +283,13 @@ $('[data-scroll-to]').on('click touchstart', e => {
 
 
 })
+
+
+//fancybox
+
+$(function () {
+  $("[data-fancybox]").fancybox({
+    // Options will go here
+  });
+
+})

@@ -1136,81 +1136,6 @@ footer {
   -ms-flex-pack: center;
   justify-content: center; }
 
-/*.burger .section-title {
-  margin-bottom: 0.9375rem;
-}
-
-.burger-slider {
-  display: flex;
-  width: 100%;
-  align-items: center;
-}
-
-.burger-slider__beef {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2% 10%;
-  }
-
-  @include phones {
-    padding: 0;
-  }
-}
-
-.burger__image {
-  width: 40%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include tablets {
-    width: 80%;
-  }
-}
-
-.burger__image-img {
-  width: 100%;
-  margin-top: 3.125rem;
-}
-
-.burger__content {
-  width: 60%;
-  color: #fff;
-  font-family: 'ubuntulight';
-  font-size: 0.875rem;
-
-  @include tablets {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.burger__small {
-  width: 5.625rem;
-  height: 5.625rem;
-  background-color: #f08c33;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 0.3125rem;
-  left: 0;
-  top: 0;
-  transition: .5s;
-
-  &:hover {
-    background-color: $orange;
-  }
-}
-*/
 .burger__small-text {
   font-size: 0.875rem;
   font-family: 'gagalinregular', Arial, sans-serif;
@@ -1331,7 +1256,7 @@ footer {
   -o-transition: .5s;
   transition: .5s; }
   .composition:hover {
-    background-color: #e35028; }
+    background-color: #e25028; }
   @media screen and (max-width: 768px) {
     .composition {
       left: 5%; } }
@@ -1343,15 +1268,14 @@ footer {
 .composition:hover .composition-detail {
   display: block;
   left: 5.625rem; }
-
-@media screen and (max-width: 480px) {
-  .composition:hover .composition-detail {
-    -webkit-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-    top: 2.5rem;
-    left: -2.5rem;
-    z-index: 2; } }
+  @media screen and (max-width: 480px) {
+    .composition:hover .composition-detail {
+      -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7);
+      top: 2.5rem;
+      left: -2.5rem;
+      z-index: 2; } }
 
 .composition-detail {
   position: absolute;
@@ -1375,9 +1299,8 @@ footer {
   margin: 0rem 1.25rem 0.875rem 1.125rem;
   font-size: 0.875rem;
   line-height: 1.5rem; }
-
-.composition-detail__item:first-child {
-  margin-top: 1.125rem; }
+  .composition-detail__item:first-child {
+    margin-top: 1.125rem; }
 
 .composition-detail__item span {
   margin-top: 0.5rem; }
@@ -1406,6 +1329,9 @@ footer {
 .composition__title {
   margin-top: 0.9375rem;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .composition__title {
+      margin-top: 0.5rem; } }
 
 .burgers-section--title {
   color: #fff;
@@ -1868,46 +1794,101 @@ footer {
       line-height: 3;
       padding: 0 12%;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__hover {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: column;
+      -webkit-justify-content: column;
+      -ms-flex-pack: column;
+      justify-content: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+
+.reviews__descr {
+  padding: 17% 12% 0; }
 
 .review__name {
-  color: #fff;
   font-family: 'gagalinregular';
-  font-size: 0.875rem;
-  margin: 1.5625rem 0; }
-  @media screen and (max-width: 768px) {
-    .review__name {
-      margin: 0.875rem; } }
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem;
+  color: #fff; }
   @media screen and (max-width: 480px) {
     .review__name {
-      margin: 0.875rem; } }
+      line-height: 1.25rem; } }
 
 .review__text {
-  color: #fff;
-  font-family: 'ubuntulight';
-  font-size: 1rem;
-  margin-bottom: 0.8125rem; }
+  font-size: .875rem;
+  font-weight: 300;
+  margin-bottom: .8125rem; }
   @media screen and (max-width: 480px) {
     .review__text {
       display: none; } }
 
-.more__link {
-  border-radius: 0.3125rem;
-  background-color: #475052;
-  padding: 0.5rem 0.75rem;
+.review__text {
+  color: #fff;
+  font-family: 'ubuntulight'; }
+
+.review__link {
   display: inline-block;
-  color: #ffffff;
+  text-decoration: none; }
+
+.review-link__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-family: 'ubuntulight';
+  border-radius: 0.3125rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'ubuntumedium';
+  width: 5.9375rem;
+  background-color: #2f3234;
   font-size: 0.75rem;
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s; }
-  .more__link:hover {
-    background-color: #313334; }
+  transition: .3s;
+  padding: 0.5rem 0.75rem; }
+  .review-link__btn:hover {
+    background-color: #1f2122; }
+  @media screen and (max-width: 480px) {
+    .review-link__btn {
+      margin: 0 auto;
+      width: 5.3125rem;
+      padding: 0.25rem 0.375rem; } }
 
-.reviews__descr {
-  margin: 0 0.9375rem; }
+.full-review__popup {
+  display: none;
+  width: 37.5rem;
+  margin: 10% 10%;
+  border-radius: 0.625rem; }
+  @media screen and (max-width: 480px) {
+    .full-review__popup {
+      width: 28.125rem;
+      font-size: 1rem; } }
+
+.full-review__name {
+  font-family: 'gagalinregular';
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem; }
+  @media screen and (max-width: 480px) {
+    .full-review__name {
+      font-size: 1rem; } }
+
+.full-review__text {
+  font-size: 0.875rem;
+  font-family: 'ubuntulight';
+  font-weight: 300; }
+  @media screen and (max-width: 480px) {
+    .full-review__text {
+      font-size: 1rem; } }
 
 .order {
   background: url("../img/bg/order.jpg") center center no-repeat;
@@ -1979,7 +1960,7 @@ footer {
       margin-right: 0; } }
   @media screen and (max-width: 480px) {
     .form__content {
-      width: 97%; } }
+      width: 98%; } }
 
 .form__row {
   display: -webkit-box;
@@ -2022,6 +2003,9 @@ footer {
 .form__block-title {
   color: #fff;
   font-family: "ubuntulight"; }
+  @media screen and (max-width: 480px) {
+    .form__block-title {
+      font-size: 0.875rem; } }
 
 .form__input, .form__teatarea {
   margin-top: 0.5rem;
@@ -2035,6 +2019,9 @@ footer {
     .form__input, .form__teatarea {
       margin-top: 1rem;
       margin-bottom: 0; } }
+  @media screen and (max-width: 480px) {
+    .form__input, .form__teatarea {
+      margin-top: 0.3125rem; } }
 
 .form__input:focus, .form__teatarea:focus {
   outline: none;
