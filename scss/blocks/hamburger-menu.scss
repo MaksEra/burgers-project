@@ -7,7 +7,7 @@
   background: rgba(47, 50, 52, 0.99);
   align-items: center;
   justify-content: center;
-  z-index: 1200;
+  z-index: 1000;
   display: none;
   transition: opacity .3s;
 
@@ -20,16 +20,9 @@
 .hamburger-menu__logo {
   position: absolute;
   top: 0.625rem;
-  left: 1.25rem;
+  left: 1rem;
   right: 0.625rem;
   z-index: 101;
-
-  @include phones {
-    &-pic {
-      width: 75%;
-      height: 75%;
-    }
-  }
 }
 
 .hamburger-menu__close {
