@@ -646,6 +646,10 @@ footer {
   left: 1rem;
   right: 0.625rem;
   z-index: 101; }
+  @media screen and (max-width: 480px) {
+    .hamburger-menu__logo {
+      width: 27%;
+      height: 27%; } }
 
 .hamburger-menu__close {
   position: fixed;

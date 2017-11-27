@@ -23,6 +23,11 @@
   left: 1rem;
   right: 0.625rem;
   z-index: 101;
+
+  @include phones {
+    width: 27%;
+    height: 27%;
+  }
 }
 
 .hamburger-menu__close {
