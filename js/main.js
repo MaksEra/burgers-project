@@ -37,26 +37,48 @@ $(function () {
 })
 
 
-//запрет или разрешение скороллинга
-  var scrollControl = function(param) {
-    $.fn.fullpage.setAllowScrolling(param);
-    $.fn.fullpage.setKeyboardScrolling(param, 'down');
-  }
-//меню в моб версии
-        $('.menu-hamburger-link').on('click', function(){
-            $('.hamb-menu').css('display','block');
-            $('.hamb-menu').addClass('hamb-menu-active');            
-            // $("section:not(.first_screen)").css('display','none');
-            // $("body").css('overflow','hidden');
-            $('body').addClass('disabled-onepage-scroll');
-                
-            $('.onepage-pagination').css('right','-99999px');
-        });
-        $('#closeIcon').on('click', function(){
-            $('.hamb-menu').css('display','none');
-            $('.hamb-menu').removeClass('hamb-menu-active');
-            $('.onepage-pagination').css('right','25px');
-        });
+//hamburger-menu
+
+$(function() {
+  const menuHam = $('.hamburger-menu');
+  const buttonHam = $('.hamburger-menu-link');
+  const closeHam = $('.hamburger-menu__close');
+  const itemHam = $('.hamburger-menu__link');
+
+  let inProcess = false;
+
+  buttonHam.on('click touchstart', e => {
+   menuHam.addClass('hamburger-menu_visible');
+
+   if (inProcess) return
+
+   inProcess = true
+
+   setTimeout(() => {
+     inProcess = false
+  }, 1000);
+
+  });
+
+  closeHam.on('click touchstart', e => {
+   if (inProcess) return
+
+   inProcess = true
+
+   setTimeout(() => {
+     inProcess = false
+  }, 1000);
+
+  menuHam.removeClass('hamburger-menu_visible');
+  });
+
+  itemHam.on('click touchstart', e => {
+    e.preventDefault();
+    menuHam.removeClass('hamburger-menu_visible');
+    window.location.href = e.currentTarget.href;
+
+  })
+});
 
 
 //slider
